@@ -1365,7 +1365,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: false,
    robada: true,
    sobregiro: true,
-   limiteCredito: "$492376.76",
+   limiteCredito: 492376.76,
    pais: "Ukraine",
    codigoPais: "UA"
 },
@@ -1378,7 +1378,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: false,
    robada: false,
    sobregiro: false,
-   limiteCredito: "$145258.10",
+   limiteCredito: 145258.10,
    pais: "China",
    codigoPais: "CN"
 },
@@ -1391,7 +1391,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: false,
    robada: true,
    sobregiro: true,
-   limiteCredito: "$79032.91",
+   limiteCredito: 79032.91,
    pais: "Belarus",
    codigoPais: "BY"
 },
@@ -1404,7 +1404,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: false,
    robada: true,
    sobregiro: false,
-   limiteCredito: "$40203.13",
+   limiteCredito: 40203.13,
    pais: "Peru",
    codigoPais: "PE"
 },
@@ -1417,7 +1417,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: true,
    sobregiro: false,
-   limiteCredito: "$399176.35",
+   limiteCredito: 399176.35,
    pais: "Poland",
    codigoPais: "PL"
 },
@@ -1430,7 +1430,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: true,
    sobregiro: false,
-   limiteCredito: "$305853.77",
+   limiteCredito: 305853.77,
    pais: "Indonesia",
    codigoPais: "ID"
 },
@@ -1443,7 +1443,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: false,
    robada: false,
    sobregiro: false,
-   limiteCredito: "$375197.47",
+   limiteCredito: 375197.47,
    pais: "China",
    codigoPais: "CN"
 },
@@ -1456,7 +1456,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: false,
    sobregiro: true,
-   limiteCredito: "$195402.76",
+   limiteCredito: 195402.76,
    pais: "Japan",
    codigoPais: "JP"
 },
@@ -1469,7 +1469,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: true,
    sobregiro: false,
-   limiteCredito: "$464413.19",
+   limiteCredito: 464413.19,
    pais: "Japan",
    codigoPais: "JP"
 },
@@ -1482,7 +1482,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: true,
    sobregiro: true,
-   limiteCredito: "$474983.40",
+   limiteCredito: 474983.40,
    pais: "China",
    codigoPais: "CN"
 },
@@ -1495,7 +1495,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: true,
    sobregiro: false,
-   limiteCredito: "$436093.39",
+   limiteCredito: 436093.39,
    pais: "Guatemala",
    codigoPais: "GT"
 },
@@ -1508,7 +1508,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: false,
    sobregiro: false,
-   limiteCredito: "$308634.09",
+   limiteCredito: 308634.09,
    pais: "Philippines",
    codigoPais: "PH"
 },
@@ -1521,7 +1521,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: false,
    sobregiro: false,
-   limiteCredito: "$396358.14",
+   limiteCredito: 396358.14,
    pais: "Ireland",
    codigoPais: "IE"
 },
@@ -1534,7 +1534,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: false,
    sobregiro: false,
-   limiteCredito: "$303647.87",
+   limiteCredito: 303647.87,
    pais: "Russia",
    codigoPais: "RU"
 },
@@ -1547,7 +1547,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: false,
    sobregiro: true,
-   limiteCredito: "$45186.90",
+   limiteCredito: 45186.90,
    pais: "Venezuela",
    codigoPais: "VE"
 },
@@ -1560,7 +1560,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: false,
    sobregiro: false,
-   limiteCredito: "$215797.99",
+   limiteCredito: 215797.99,
    pais: "Indonesia",
    codigoPais: "ID"
 },
@@ -1573,7 +1573,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: true,
    sobregiro: true,
-   limiteCredito: "$319476.51",
+   limiteCredito: 319476.51,
    pais: "Russia",
    codigoPais: "RU"
 },
@@ -1586,7 +1586,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: false,
    sobregiro: true,
-   limiteCredito: "$211409.61",
+   limiteCredito: 211409.61,
    pais: "Indonesia",
    codigoPais: "ID"
 },
@@ -1599,7 +1599,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: false,
    robada: false,
    sobregiro: true,
-   limiteCredito: "$419636.17",
+   limiteCredito: 419636.17,
    pais: "Portugal",
    codigoPais: "PT"
 },
@@ -1612,7 +1612,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: false,
    robada: true,
    sobregiro: true,
-   limiteCredito: "$125417.69",
+   limiteCredito: 125417.69,
    pais: "Norway",
    codigoPais: "NO"
 },
@@ -1625,7 +1625,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: false,
    robada: false,
    sobregiro: false,
-   limiteCredito: "$161516.83",
+   limiteCredito: 161516.83,
    pais: "Colombia",
    codigoPais: "CO"
 },
@@ -1638,7 +1638,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: false,
    robada: false,
    sobregiro: false,
-   limiteCredito: "$36054.08",
+   limiteCredito: 36054.08,
    pais: "Indonesia",
    codigoPais: "ID"
 },
@@ -1651,7 +1651,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: false,
    sobregiro: false,
-   limiteCredito: "$183992.54",
+   limiteCredito: 183992.54,
    pais: "Indonesia",
    codigoPais: "ID"
 },
@@ -1664,7 +1664,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: true,
    sobregiro: true,
-   limiteCredito: "$302434.31",
+   limiteCredito: 302434.31,
    pais: "France",
    codigoPais: "FR"
 },
@@ -1677,7 +1677,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: false,
    sobregiro: false,
-   limiteCredito: "$497281.75",
+   limiteCredito: 497281.75,
    pais: "Colombia",
    codigoPais: "CO"
 },
@@ -1690,7 +1690,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: false,
    robada: true,
    sobregiro: false,
-   limiteCredito: "$389095.26",
+   limiteCredito: 389095.26,
    pais: "Panama",
    codigoPais: "PA"
 },
@@ -1703,7 +1703,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: false,
    robada: false,
    sobregiro: false,
-   limiteCredito: "$23203.07",
+   limiteCredito: 23203.07,
    pais: "Sweden",
    codigoPais: "SE"
 },
@@ -1716,7 +1716,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: false,
    robada: false,
    sobregiro: true,
-   limiteCredito: "$456521.56",
+   limiteCredito: 456521.56,
    pais: "Palestinian Territory",
    codigoPais: "PS"
 },
@@ -1729,7 +1729,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: true,
    sobregiro: false,
-   limiteCredito: "$383350.40",
+   limiteCredito: 383350.40,
    pais: "Syria",
    codigoPais: "SY"
 },
@@ -1742,7 +1742,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: true,
    sobregiro: true,
-   limiteCredito: "$451525.16",
+   limiteCredito: 451525.16,
    pais: "Venezuela",
    codigoPais: "VE"
 },
@@ -1755,7 +1755,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: false,
    robada: true,
    sobregiro: false,
-   limiteCredito: "$429969.92",
+   limiteCredito: 429969.92,
    pais: "Afghanistan",
    codigoPais: "AF"
 },
@@ -1768,7 +1768,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: false,
    robada: true,
    sobregiro: false,
-   limiteCredito: "$183446.62",
+   limiteCredito: 183446.62,
    pais: "Russia",
    codigoPais: "RU"
 },
@@ -1781,7 +1781,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: true,
    sobregiro: false,
-   limiteCredito: "$24548.82",
+   limiteCredito: 24548.82,
    pais: "China",
    codigoPais: "CN"
 },
@@ -1794,7 +1794,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: true,
    sobregiro: true,
-   limiteCredito: "$106186.69",
+   limiteCredito: 106186.69,
    pais: "Tunisia",
    codigoPais: "TN"
 },
@@ -1807,7 +1807,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: false,
    robada: true,
    sobregiro: false,
-   limiteCredito: "$264726.17",
+   limiteCredito: 264726.17,
    pais: "Netherlands",
    codigoPais: "NL"
 },
@@ -1820,7 +1820,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: false,
    robada: false,
    sobregiro: false,
-   limiteCredito: "$125261.72",
+   limiteCredito: 125261.72,
    pais: "Equatorial Guinea",
    codigoPais: "GQ"
 },
@@ -1833,7 +1833,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: false,
    robada: false,
    sobregiro: false,
-   limiteCredito: "$355374.98",
+   limiteCredito: 355374.98,
    pais: "Nigeria",
    codigoPais: "NG"
 },
@@ -1846,7 +1846,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: true,
    sobregiro: false,
-   limiteCredito: "$498007.91",
+   limiteCredito: 498007.91,
    pais: "Mexico",
    codigoPais: "MX"
 },
@@ -1859,7 +1859,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: false,
    sobregiro: false,
-   limiteCredito: "$466070.93",
+   limiteCredito: 466070.93,
    pais: "Brazil",
    codigoPais: "BR"
 },
@@ -1872,7 +1872,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: false,
    sobregiro: false,
-   limiteCredito: "$302225.36",
+   limiteCredito: 302225.36,
    pais: "Philippines",
    codigoPais: "PH"
 },
@@ -1885,7 +1885,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: true,
    sobregiro: true,
-   limiteCredito: "$117970.24",
+   limiteCredito: 117970.24,
    pais: "China",
    codigoPais: "CN"
 },
@@ -1898,7 +1898,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: true,
    sobregiro: true,
-   limiteCredito: "$456520.84",
+   limiteCredito: 456520.84,
    pais: "Malta",
    codigoPais: "MT"
 },
@@ -1911,7 +1911,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: false,
    sobregiro: false,
-   limiteCredito: "$349107.13",
+   limiteCredito: 349107.13,
    pais: "South Korea",
    codigoPais: "KR"
 },
@@ -1924,7 +1924,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: false,
    robada: true,
    sobregiro: false,
-   limiteCredito: "$220778.10",
+   limiteCredito: 220778.10,
    pais: "Belarus",
    codigoPais: "BY"
 },
@@ -1937,7 +1937,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: false,
    sobregiro: false,
-   limiteCredito: "$216822.24",
+   limiteCredito: 216822.24,
    pais: "Iran",
    codigoPais: "IR"
 },
@@ -1950,7 +1950,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: false,
    sobregiro: true,
-   limiteCredito: "$167781.24",
+   limiteCredito: 167781.24,
    pais: "China",
    codigoPais: "CN"
 },
@@ -1963,7 +1963,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: false,
    sobregiro: false,
-   limiteCredito: "$84471.00",
+   limiteCredito: 84471.00,
    pais: "China",
    codigoPais: "CN"
 },
@@ -1976,7 +1976,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: false,
    robada: false,
    sobregiro: true,
-   limiteCredito: "$63051.13",
+   limiteCredito: 63051.13,
    pais: "Sweden",
    codigoPais: "SE"
 },
@@ -1989,7 +1989,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: true,
    sobregiro: true,
-   limiteCredito: "$361894.61",
+   limiteCredito: 361894.61,
    pais: "China",
    codigoPais: "CN"
 },
@@ -2002,7 +2002,7 @@ db.tarjetasCredito.insertMany([{
    bloqueada: true,
    robada: false,
    sobregiro: true,
-   limiteCredito: "$151355.46",
+   limiteCredito: 151355.46,
    pais: "Togo",
    codigoPais: "TG"
 }]);
@@ -2016,7 +2016,7 @@ db.carros.insertMany([{
    modeloAnio: 1997, 
    vinCarro: "1G4HR54KX34344610",
    fechaSalida: "7/24/1968",
-   precio: "$37332.20"
+   precio: 37332.20
 },
 {
    _id: 2,
@@ -2025,7 +2025,7 @@ db.carros.insertMany([{
    modeloAnio: 2002, 
    vinCarro: "WAUXU54BX3N185271",
    fechaSalida: "4/4/1955",
-   precio: "$39401.52"
+   precio: 39401.52
 },
 {
    _id: 3,
@@ -2034,7 +2034,7 @@ db.carros.insertMany([{
    modeloAnio: 2003, 
    vinCarro: "5GAKVCKDXFJ378293",
    fechaSalida: "12/2/1961",
-   precio: "$47802.32"
+   precio: 47802.32
 },
 {
    _id: 4,
@@ -2043,7 +2043,7 @@ db.carros.insertMany([{
    modeloAnio: 1988, 
    vinCarro: "1G6DA1E34D0573824",
    fechaSalida: "8/23/1997",
-   precio: "$45020.80"
+   precio: 45020.80
 },
 {
    _id: 5,
@@ -2052,7 +2052,7 @@ db.carros.insertMany([{
    modeloAnio: 2011, 
    vinCarro: "WBAEK734X4B466341",
    fechaSalida: "1/26/1989",
-   precio: "$8867.48"
+   precio: 8867.48
 },
 {
    _id: 6,
@@ -2061,7 +2061,7 @@ db.carros.insertMany([{
    modeloAnio: 2006, 
    vinCarro: "WBABD53455P273178",
    fechaSalida: "12/9/1969",
-   precio: "$21009.74"
+   precio: 21009.74
 },
 {
    _id: 7,
@@ -2070,7 +2070,7 @@ db.carros.insertMany([{
    modeloAnio: 1993, 
    vinCarro: "2T1BURHE2FC918509",
    fechaSalida: "10/29/1980",
-   precio: "$36550.05"
+   precio: 36550.05
 },
 {
    _id: 8,
@@ -2079,7 +2079,7 @@ db.carros.insertMany([{
    modeloAnio: 2010, 
    vinCarro: "2LNBL8CV0AX238175",
    fechaSalida: "7/4/1980",
-   precio: "$25815.69"
+   precio: 25815.69
 },
 {
    _id: 9,
@@ -2088,7 +2088,7 @@ db.carros.insertMany([{
    modeloAnio: 2005, 
    vinCarro: "WAUKD98P49A441962",
    fechaSalida: "10/5/1979",
-   precio: "$10504.73"
+   precio: 10504.73
 },
 {
    _id: 10,
@@ -2097,7 +2097,7 @@ db.carros.insertMany([{
    modeloAnio: 2000, 
    vinCarro: "JH4CU25669C253764",
    fechaSalida: "8/19/1976",
-   precio: "$7607.70"
+   precio: 7607.70
 },
 {
    _id: 11,
@@ -2106,7 +2106,7 @@ db.carros.insertMany([{
    modeloAnio: 1998, 
    vinCarro: "WP1AE2A25FL495655",
    fechaSalida: "3/27/1953",
-   precio: "$25319.23"
+   precio: 25319.23
 },
 {
    _id: 12,
@@ -2115,7 +2115,7 @@ db.carros.insertMany([{
    modeloAnio: 2005, 
    vinCarro: "3GYFNEEY5BS847724",
    fechaSalida: "2/7/1989",
-   precio: "$25054.02"
+   precio: 25054.02
 },
 {
    _id: 13,
@@ -2124,7 +2124,7 @@ db.carros.insertMany([{
    modeloAnio: 1996, 
    vinCarro: "SCBGR3ZA8DC798109",
    fechaSalida: "5/3/2011",
-   precio: "$4572.22"
+   precio: 4572.22
 },
 {
    _id: 14,
@@ -2133,7 +2133,7 @@ db.carros.insertMany([{
    modeloAnio: 1997, 
    vinCarro: "SCFFDAAE2AG306710",
    fechaSalida: "5/16/1991",
-   precio: "$36467.05"
+   precio: 36467.05
 },
 {
    _id: 15,
@@ -2142,7 +2142,7 @@ db.carros.insertMany([{
    modeloAnio: 1968, 
    vinCarro: "WAUEL74F66N556309",
    fechaSalida: "7/14/1975",
-   precio: "$46128.00"
+   precio: 46128.00
 },
 {
    _id: 16,
@@ -2151,7 +2151,7 @@ db.carros.insertMany([{
    modeloAnio: 2003, 
    vinCarro: "1FMEU2DE0AU404009",
    fechaSalida: "12/21/2002",
-   precio: "$48420.28"
+   precio: 48420.28
 },
 {
    _id: 17,
@@ -2160,7 +2160,7 @@ db.carros.insertMany([{
    modeloAnio: 2012, 
    vinCarro: "JN1AZ4FH6FM445085",
    fechaSalida: "8/14/1957",
-   precio: "$17694.18"
+   precio: 17694.18
 },
 {
    _id: 18,
@@ -2169,7 +2169,7 @@ db.carros.insertMany([{
    modeloAnio: 2009, 
    vinCarro: "WAUSH78E18A115493",
    fechaSalida: "12/22/1952",
-   precio: "$46069.63"
+   precio: 46069.63
 },
 {
    _id: 19,
@@ -2178,7 +2178,7 @@ db.carros.insertMany([{
    modeloAnio: 1996, 
    vinCarro: "1GKS1HE03ER090037",
    fechaSalida: "10/29/1955",
-   precio: "$8869.65"
+   precio: 8869.65
 },
 {
    _id: 20,
@@ -2187,7 +2187,7 @@ db.carros.insertMany([{
    modeloAnio: 1995, 
    vinCarro: "1G4GC5ECXBF988700",
    fechaSalida: "2/25/1979",
-   precio: "$7247.23"
+   precio: 7247.23
 },
 {
    _id: 21,
@@ -2196,7 +2196,7 @@ db.carros.insertMany([{
    modeloAnio: 1997, 
    vinCarro: "1FTWX3B52AE345421",
    fechaSalida: "6/3/1984",
-   precio: "$46964.71"
+   precio: 46964.71
 },
 {
    _id: 22,
@@ -2205,7 +2205,7 @@ db.carros.insertMany([{
    modeloAnio: 1992, 
    vinCarro: "JA32X8HW9AU283583",
    fechaSalida: "7/31/1958",
-   precio: "$48184.12"
+   precio: 48184.12
 },
 {
    _id: 23,
@@ -2214,7 +2214,7 @@ db.carros.insertMany([{
    modeloAnio: 1996, 
    vinCarro: "JH4CU2F61BC477416",
    fechaSalida: "7/19/2017",
-   precio: "$10616.15"
+   precio: 10616.15
 },
 {
    _id: 24,
@@ -2223,7 +2223,7 @@ db.carros.insertMany([{
    modeloAnio: 2000, 
    vinCarro: "1G6AB5SA8F0402927",
    fechaSalida: "12/17/2019",
-   precio: "$6611.44"
+   precio: 6611.44
 },
 {
    _id: 25,
@@ -2232,7 +2232,7 @@ db.carros.insertMany([{
    modeloAnio: 2004, 
    vinCarro: "1G6KD57926U168452",
    fechaSalida: "12/13/1993",
-   precio: "$19088.58"
+   precio: 19088.58
 },
 {
    _id: 26,
@@ -2241,7 +2241,7 @@ db.carros.insertMany([{
    modeloAnio: 1988, 
    vinCarro: "SCFAD01A87G573151",
    fechaSalida: "12/13/1986",
-   precio: "$22422.78"
+   precio: 22422.78
 },
 {
    _id: 27,
@@ -2250,7 +2250,7 @@ db.carros.insertMany([{
    modeloAnio: 2008, 
    vinCarro: "JTDZN3EU8D3326218",
    fechaSalida: "4/29/1969",
-   precio: "$41866.97"
+   precio: 41866.97
 },
 {
    _id: 28,
@@ -2259,7 +2259,7 @@ db.carros.insertMany([{
    modeloAnio: 2002, 
    vinCarro: "WAUGL98E18A031612",
    fechaSalida: "1/11/1975",
-   precio: "$35743.29"
+   precio: 35743.29
 },
 {
    _id: 29,
@@ -2268,7 +2268,7 @@ db.carros.insertMany([{
    modeloAnio: 2005, 
    vinCarro: "WBAFB33561L698558",
    fechaSalida: "10/24/1952",
-   precio: "$31142.00"
+   precio: 31142.00
 },
 {
    _id: 30,
@@ -2277,7 +2277,7 @@ db.carros.insertMany([{
    modeloAnio: 2011, 
    vinCarro: "1G6KD57Y56U519989",
    fechaSalida: "5/26/1995",
-   precio: "$45976.10"
+   precio: 45976.10
 },
 {
    _id: 31,
@@ -2286,7 +2286,7 @@ db.carros.insertMany([{
    modeloAnio: 2008, 
    vinCarro: "1G6DS57V180486519",
    fechaSalida: "8/26/1994",
-   precio: "$31404.38"
+   precio: 31404.38
 },
 {
    _id: 32,
@@ -2295,7 +2295,7 @@ db.carros.insertMany([{
    modeloAnio: 2007, 
    vinCarro: "1G4HP57238U442189",
    fechaSalida: "4/16/1978",
-   precio: "$11054.62"
+   precio: 11054.62
 },
 {
    _id: 33,
@@ -2304,7 +2304,7 @@ db.carros.insertMany([{
    modeloAnio: 2010, 
    vinCarro: "WBADR63492G064053",
    fechaSalida: "4/10/1957",
-   precio: "$35938.98"
+   precio: 35938.98
 },
 {
    _id: 34,
@@ -2313,7 +2313,7 @@ db.carros.insertMany([{
    modeloAnio: 2003, 
    vinCarro: "1G6AW5SX6E0130174",
    fechaSalida: "3/17/1999",
-   precio: "$41689.59"
+   precio: 41689.59
 },
 {
    _id: 35,
@@ -2322,7 +2322,7 @@ db.carros.insertMany([{
    modeloAnio: 1992, 
    vinCarro: "WAUEFAFLXCA928891",
    fechaSalida: "6/24/1961",
-   precio: "$8121.48"
+   precio: 8121.48
 },
 {
    _id: 36,
@@ -2331,7 +2331,7 @@ db.carros.insertMany([{
    modeloAnio: 2006, 
    vinCarro: "3C4PDCGBXET214645",
    fechaSalida: "10/16/1997",
-   precio: "$34684.90"
+   precio: 34684.90
 },
 {
    _id: 37,
@@ -2340,7 +2340,7 @@ db.carros.insertMany([{
    modeloAnio: 2013, 
    vinCarro: "1G6DJ577180413817",
    fechaSalida: "8/18/2015",
-   precio: "$6986.29"
+   precio: 6986.29
 },
 {
    _id: 38,
@@ -2349,7 +2349,7 @@ db.carros.insertMany([{
    modeloAnio: 2006, 
    vinCarro: "1FTWF3A55AE047143",
    fechaSalida: "7/6/1954",
-   precio: "$40089.57"
+   precio: 40089.57
 },
 {
    _id: 39,
@@ -2358,7 +2358,7 @@ db.carros.insertMany([{
    modeloAnio: 1998, 
    vinCarro: "2G4WD582761421773",
    fechaSalida: "2/24/1969",
-   precio: "$48770.62"
+   precio: 48770.62
 },
 {
    _id: 40,
@@ -2367,7 +2367,7 @@ db.carros.insertMany([{
    modeloAnio: 2001, 
    vinCarro: "TRUTC28N311780027",
    fechaSalida: "11/25/2006",
-   precio: "$16293.51"
+   precio: 16293.51
 },
 {
    _id: 41,
@@ -2376,7 +2376,7 @@ db.carros.insertMany([{
    modeloAnio: 1992, 
    vinCarro: "WBANA53564B710275",
    fechaSalida: "5/20/1989",
-   precio: "$48422.64"
+   precio: 48422.64
 },
 {
    _id: 42,
@@ -2385,7 +2385,7 @@ db.carros.insertMany([{
    modeloAnio: 1960, 
    vinCarro: "KNDJT2A53D7166270",
    fechaSalida: "12/27/1973",
-   precio: "$11234.62"
+   precio: 11234.62
 },
 {
    _id: 43,
@@ -2394,7 +2394,7 @@ db.carros.insertMany([{
    modeloAnio: 2000, 
    vinCarro: "WAUFFAFL8FN541080",
    fechaSalida: "11/12/1950",
-   precio: "$9106.54"
+   precio: 9106.54
 },
 {
    _id: 44,
@@ -2403,7 +2403,7 @@ db.carros.insertMany([{
    modeloAnio: 1997, 
    vinCarro: "JM1GJ1T67F1432508",
    fechaSalida: "12/17/1953",
-   precio: "$4428.97"
+   precio: 4428.97
 },
 {
    _id: 45,
@@ -2412,7 +2412,7 @@ db.carros.insertMany([{
    modeloAnio: 2000, 
    vinCarro: "WBABN33482P814222",
    fechaSalida: "2/23/1999",
-   precio: "$6912.29"
+   precio: 6912.29
 },
 {
    _id: 46,
@@ -2421,7 +2421,7 @@ db.carros.insertMany([{
    modeloAnio: 1997, 
    vinCarro: "1FMJK1JT7FE560194",
    fechaSalida: "12/28/1989",
-   precio: "$9894.25"
+   precio: 9894.25
 },
 {
    _id: 47,
@@ -2430,7 +2430,7 @@ db.carros.insertMany([{
    modeloAnio: 1988, 
    vinCarro: "3D7JB1EP0AG871252",
    fechaSalida: "5/19/2004",
-   precio: "$43123.21"
+   precio: 43123.21
 },
 {
    _id: 48,
@@ -2439,7 +2439,7 @@ db.carros.insertMany([{
    modeloAnio: 1997, 
    vinCarro: "JN8AS5MT9DW530099",
    fechaSalida: "12/2/1989",
-   precio: "$18575.18"
+   precio: 18575.18
 },
 {
    _id: 49,
@@ -2448,7 +2448,7 @@ db.carros.insertMany([{
    modeloAnio: 2008, 
    vinCarro: "WDBSK7BA4CF509879",
    fechaSalida: "2/17/1961",
-   precio: "$10907.35"
+   precio: 10907.35
 },
 {
    _id: 50,
@@ -2457,7 +2457,7 @@ db.carros.insertMany([{
    modeloAnio: 2005, 
    vinCarro: "WAUDGBFL2AA318785",
    fechaSalida: "8/10/2013",
-   precio: "$9550.30"
+   precio: 9550.30
 }]);
 
 db.createCollection('compañias');
