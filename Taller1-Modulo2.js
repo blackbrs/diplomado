@@ -1360,7 +1360,6 @@ db.createCollection('tarjetasCredito');
 db.tarjetasCredito.insertMany([{
    numero: "3562037826887834",
    tipo: "jcb",
-   empresa: "Hodkiewicz-King",limiteCreditopais
    propietario: "Ruthe Adair",
    fechaIngreso: "11/17/2017",
    bloqueada: false,
