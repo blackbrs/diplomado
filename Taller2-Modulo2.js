@@ -1002,7 +1002,8 @@ db.usuarios.insertMany(
         { nombres: "Bamby", apellidos: "Saturley", username: "bsaturleyro", email: "bsaturleyro@mac.com", genero: "F", edad: 10, fechaNacimiento: "4/30/1989", nacionalidad: "Jordan" },
         { nombres: "Montague", apellidos: "Heeks", username: "mheeksrp", email: "mheeksrp@discuz.net", genero: "M", edad: 33, fechaNacimiento: "11/22/1988", nacionalidad: "Indonesia" },
         { nombres: "Diann", apellidos: "Tweddle", username: "dtweddlerq", email: "dtweddlerq@un.org", genero: "F", edad: 74, fechaNacimiento: "9/16/2008", nacionalidad: "Comoros" },
-        { nombres: "Letitia", apellidos: "Armal", username: "larmalrr", email: "larmalrr@wisc.edu", genero: "F", edad: 48, fechaNacimiento: "10/2/2003", nacionalidad: "China" }]
+        { nombres: "Letitia", apellidos: "Armal", username: "larmalrr", email: "larmalrr@wisc.edu", genero: "F", edad: 48, fechaNacimiento: "10/2/2003", nacionalidad: "China" }
+    ]
 );
 
 db.createCollection('peliculas');
@@ -6027,3 +6028,68 @@ db.compañias.insertMany(
     { nombreComp: "Jamia", pais: "Portugal", carroId: 944 },
     { nombreComp: "Twinder", pais: "Bolivia", carroId: 747 }
     ]);
+
+// Primer consulta con cursor
+//Filtrar usuarios por nacionalidad y ordenar por edad:
+var usuarios = db.usuarios.find({
+    nacionalidad: "China"
+ }).sort({ edad: 1 }).pretty();
+
+ while (usuarios.hasNext()) {
+    var usuario = usuarios.next();
+    print("username: " + usuario.username + ", Genero: " + usuario.genero+ ", Edad: " + usuario.edad );
+  }
+
+// Segundo consulta con cursor
+// Filtrar películas por género múltiple
+var peliculas =  db.peliculas.find({
+    genero: { $in: ["Comedy", "Drama"] } 
+}).pretty();
+while (peliculas.hasNext()) {
+    var pelicula = peliculas.next();
+    print("Nombre: " + pelicula.nombre + ", Fecha de estreno: " + pelicula.fechaEstreno+ ", Genero: " + pelicula.genero );
+  }
+// Tercera consulta con cursor
+//Mostrar las tarjetas de credito  que poseen sobregiro activado
+var tarjetas = db.tarjetasCredito.find({
+    sobregiro: true
+ }).pretty();
+ while (tarjetas.hasNext()) {
+    var tarjeta = tarjetas.next();
+    print("Tipo: " + tarjeta.tipo + ", Empresa: " + tarjeta.empresa+ ", Limite Sobregiro: " + tarjeta.limiteSobregiro+ ", Pais: " + tarjeta.pais );
+  }
+
+  // CREACION DE INDICES PARA TODOS LOS MODELOS
+  db.usuarios.createIndex({genero: 1});
+  db.usuarios.getIndexes();
+
+  db.peliculas.createIndex({genero: 1});
+  db.peliculas.getIndexes();
+
+  db.animales.createIndex({pais: 1});
+  db.animales.getIndexes();
+
+  db.tarjetasCredito.createIndex({tipo: 1});
+  db.tarjetasCredito.getIndexes();
+
+  db.carros.createIndex({fabricante:1});
+  db.carros.getIndexes();
+
+  db.compañias.createIndex({pais: 1});
+  db.compañias.getIndexes();
+
+  // Implemente el metodo limit en consultas
+  // Consultar 10 usuarios de nacionalidad china en orden de la menor edad a la mayor
+db.usuarios.find({
+    nacionalidad: "China"
+ }).sort({ edad: 1 }).limit(10).pretty();
+
+ //Consultar 10 peliculas que sean del genero de drama o comedia
+ db.peliculas.find({
+    genero: { $in: ["Comedy", "Drama"] } 
+}).limit(10).pretty();
+
+//Consultar 10 carros que sean del fabricamte Honda
+db.carros.find({
+    fabricante: "Honda"
+}).sort({modeloAnio: 1}).limit(16).pretty();
