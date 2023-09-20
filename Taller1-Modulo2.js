@@ -1360,7 +1360,7 @@ db.createCollection('tarjetasCredito');
 db.tarjetasCredito.insertMany([{
    numero: "3562037826887834",
    tipo: "jcb",
-   empresa: "Hodkiewicz-King",
+   empresa: "Hodkiewicz-King",limiteCreditopais
    propietario: "Ruthe Adair",
    fechaIngreso: "11/17/2017",
    bloqueada: false,
@@ -2014,7 +2014,8 @@ db.carros.insertMany([{
    _id: 1,
    modelo: "XJ Series",
    fabricante: "Jaguar",
-   modeloAnio: 1997, "vinCarro": "1G4HR54KX34344610",
+   modeloAnio: 1997, 
+   vinCarro: "1G4HR54KX34344610",
    fechaSalida: "7/24/1968",
    precio: "$37332.20"
 },
@@ -2022,7 +2023,8 @@ db.carros.insertMany([{
    _id: 2,
    modelo: "F150",
    fabricante: "Ford",
-   modeloAnio: 2002, "vinCarro": "WAUXU54BX3N185271",
+   modeloAnio: 2002, 
+   vinCarro: "WAUXU54BX3N185271",
    fechaSalida: "4/4/1955",
    precio: "$39401.52"
 },
@@ -2030,7 +2032,8 @@ db.carros.insertMany([{
    _id: 3,
    modelo: "Outlander",
    fabricante: "Mitsubishi",
-   modeloAnio: 2003, "vinCarro": "5GAKVCKDXFJ378293",
+   modeloAnio: 2003, 
+   vinCarro: "5GAKVCKDXFJ378293",
    fechaSalida: "12/2/1961",
    precio: "$47802.32"
 },
@@ -2038,7 +2041,8 @@ db.carros.insertMany([{
    _id: 4,
    modelo: "Tredia",
    fabricante: "Mitsubishi",
-   modeloAnio: 1988, "vinCarro": "1G6DA1E34D0573824",
+   modeloAnio: 1988, 
+   vinCarro: "1G6DA1E34D0573824",
    fechaSalida: "8/23/1997",
    precio: "$45020.80"
 },
@@ -2046,7 +2050,8 @@ db.carros.insertMany([{
    _id: 5,
    modelo: "Mustang",
    fabricante: "Ford",
-   modeloAnio: 2011, "vinCarro": "WBAEK734X4B466341",
+   modeloAnio: 2011, 
+   vinCarro: "WBAEK734X4B466341",
    fechaSalida: "1/26/1989",
    precio: "$8867.48"
 },
@@ -2054,7 +2059,8 @@ db.carros.insertMany([{
    _id: 6,
    modelo: "M6",
    fabricante: "BMW",
-   modeloAnio: 2006, "vinCarro": "WBABD53455P273178",
+   modeloAnio: 2006, 
+   vinCarro: "WBABD53455P273178",
    fechaSalida: "12/9/1969",
    precio: "$21009.74"
 },
@@ -2062,7 +2068,8 @@ db.carros.insertMany([{
    _id: 7,
    modelo: "Samurai",
    fabricante: "Suzuki",
-   modeloAnio: 1993, "vinCarro": "2T1BURHE2FC918509",
+   modeloAnio: 1993, 
+   vinCarro: "2T1BURHE2FC918509",
    fechaSalida: "10/29/1980",
    precio: "$36550.05"
 },
@@ -2070,7 +2077,8 @@ db.carros.insertMany([{
    _id: 8,
    modelo: "Navigator L",
    fabricante: "Lincoln",
-   modeloAnio: 2010, "vinCarro": "2LNBL8CV0AX238175",
+   modeloAnio: 2010, 
+   vinCarro: "2LNBL8CV0AX238175",
    fechaSalida: "7/4/1980",
    precio: "$25815.69"
 },
@@ -2078,7 +2086,8 @@ db.carros.insertMany([{
    _id: 9,
    modelo: "Yukon",
    fabricante: "GMC",
-   modeloAnio: 2005, "vinCarro": "WAUKD98P49A441962",
+   modeloAnio: 2005, 
+   vinCarro: "WAUKD98P49A441962",
    fechaSalida: "10/5/1979",
    precio: "$10504.73"
 },
@@ -2086,7 +2095,8 @@ db.carros.insertMany([{
    _id: 10,
    modelo: "VehiCROSS",
    fabricante: "Isuzu",
-   modeloAnio: 2000, "vinCarro": "JH4CU25669C253764",
+   modeloAnio: 2000, 
+   vinCarro: "JH4CU25669C253764",
    fechaSalida: "8/19/1976",
    precio: "$7607.70"
 },
@@ -2094,7 +2104,8 @@ db.carros.insertMany([{
    _id: 11,
    modelo: "Discovery",
    fabricante: "Land Rover",
-   modeloAnio: 1998, "vinCarro": "WP1AE2A25FL495655",
+   modeloAnio: 1998, 
+   vinCarro: "WP1AE2A25FL495655",
    fechaSalida: "3/27/1953",
    precio: "$25319.23"
 },
@@ -2102,7 +2113,8 @@ db.carros.insertMany([{
    _id: 12,
    modelo: "Corvette",
    fabricante: "Chevrolet",
-   modeloAnio: 2005, "vinCarro": "3GYFNEEY5BS847724",
+   modeloAnio: 2005, 
+   vinCarro: "3GYFNEEY5BS847724",
    fechaSalida: "2/7/1989",
    precio: "$25054.02"
 },
@@ -2110,7 +2122,8 @@ db.carros.insertMany([{
    _id: 13,
    modelo: "Mirage",
    fabricante: "Mitsubishi",
-   modeloAnio: 1996, "vinCarro": "SCBGR3ZA8DC798109",
+   modeloAnio: 1996, 
+   vinCarro: "SCBGR3ZA8DC798109",
    fechaSalida: "5/3/2011",
    precio: "$4572.22"
 },
@@ -2118,7 +2131,8 @@ db.carros.insertMany([{
    _id: 14,
    modelo: "Ram Van 2500",
    fabricante: "Dodge",
-   modeloAnio: 1997, "vinCarro": "SCFFDAAE2AG306710",
+   modeloAnio: 1997, 
+   vinCarro: "SCFFDAAE2AG306710",
    fechaSalida: "5/16/1991",
    precio: "$36467.05"
 },
@@ -2126,7 +2140,8 @@ db.carros.insertMany([{
    _id: 15,
    modelo: "LeMans",
    fabricante: "Pontiac",
-   modeloAnio: 1968, "vinCarro": "WAUEL74F66N556309",
+   modeloAnio: 1968, 
+   vinCarro: "WAUEL74F66N556309",
    fechaSalida: "7/14/1975",
    precio: "$46128.00"
 },
@@ -2134,7 +2149,8 @@ db.carros.insertMany([{
    _id: 16,
    modelo: "CL",
    fabricante: "Acura",
-   modeloAnio: 2003, "vinCarro": "1FMEU2DE0AU404009",
+   modeloAnio: 2003, 
+   vinCarro: "1FMEU2DE0AU404009",
    fechaSalida: "12/21/2002",
    precio: "$48420.28"
 },
@@ -2142,7 +2158,8 @@ db.carros.insertMany([{
    _id: 17,
    modelo: "Matrix",
    fabricante: "Toyota",
-   modeloAnio: 2012, "vinCarro": "JN1AZ4FH6FM445085",
+   modeloAnio: 2012, 
+   vinCarro: "JN1AZ4FH6FM445085",
    fechaSalida: "8/14/1957",
    precio: "$17694.18"
 },
@@ -2150,7 +2167,8 @@ db.carros.insertMany([{
    _id: 18,
    modelo: "Journey",
    fabricante: "Dodge",
-   modeloAnio: 2009, "vinCarro": "WAUSH78E18A115493",
+   modeloAnio: 2009, 
+   vinCarro: "WAUSH78E18A115493",
    fechaSalida: "12/22/1952",
    precio: "$46069.63"
 },
@@ -2158,7 +2176,8 @@ db.carros.insertMany([{
    _id: 19,
    modelo: "Grand Caravan",
    fabricante: "Dodge",
-   modeloAnio: 1996, "vinCarro": "1GKS1HE03ER090037",
+   modeloAnio: 1996, 
+   vinCarro: "1GKS1HE03ER090037",
    fechaSalida: "10/29/1955",
    precio: "$8869.65"
 },
@@ -2166,7 +2185,8 @@ db.carros.insertMany([{
    _id: 20,
    modelo: "Sportage",
    fabricante: "Kia",
-   modeloAnio: 1995, "vinCarro": "1G4GC5ECXBF988700",
+   modeloAnio: 1995, 
+   vinCarro: "1G4GC5ECXBF988700",
    fechaSalida: "2/25/1979",
    precio: "$7247.23"
 },
@@ -2174,7 +2194,8 @@ db.carros.insertMany([{
    _id: 21,
    modelo: "Ram 3500",
    fabricante: "Dodge",
-   modeloAnio: 1997, "vinCarro": "1FTWX3B52AE345421",
+   modeloAnio: 1997, 
+   vinCarro: "1FTWX3B52AE345421",
    fechaSalida: "6/3/1984",
    precio: "$46964.71"
 },
@@ -2182,7 +2203,8 @@ db.carros.insertMany([{
    _id: 22,
    modelo: "Space",
    fabricante: "Isuzu",
-   modeloAnio: 1992, "vinCarro": "JA32X8HW9AU283583",
+   modeloAnio: 1992, 
+   vinCarro: "JA32X8HW9AU283583",
    fechaSalida: "7/31/1958",
    precio: "$48184.12"
 },
@@ -2190,7 +2212,8 @@ db.carros.insertMany([{
    _id: 23,
    modelo: "Range Rover",
    fabricante: "Land Rover",
-   modeloAnio: 1996, "vinCarro": "JH4CU2F61BC477416",
+   modeloAnio: 1996, 
+   vinCarro: "JH4CU2F61BC477416",
    fechaSalida: "7/19/2017",
    precio: "$10616.15"
 },
@@ -2198,7 +2221,8 @@ db.carros.insertMany([{
    _id: 24,
    modelo: "Suburban 1500",
    fabricante: "Chevrolet",
-   modeloAnio: 2000, "vinCarro": "1G6AB5SA8F0402927",
+   modeloAnio: 2000, 
+   vinCarro: "1G6AB5SA8F0402927",
    fechaSalida: "12/17/2019",
    precio: "$6611.44"
 },
@@ -2206,7 +2230,8 @@ db.carros.insertMany([{
    _id: 25,
    modelo: "Ion",
    fabricante: "Saturn",
-   modeloAnio: 2004, "vinCarro": "1G6KD57926U168452",
+   modeloAnio: 2004, 
+   vinCarro: "1G6KD57926U168452",
    fechaSalida: "12/13/1993",
    precio: "$19088.58"
 },
@@ -2214,7 +2239,8 @@ db.carros.insertMany([{
    _id: 26,
    modelo: "Town Car",
    fabricante: "Lincoln",
-   modeloAnio: 1988, "vinCarro": "SCFAD01A87G573151",
+   modeloAnio: 1988, 
+   vinCarro: "SCFAD01A87G573151",
    fechaSalida: "12/13/1986",
    precio: "$22422.78"
 },
@@ -2222,7 +2248,8 @@ db.carros.insertMany([{
    _id: 27,
    modelo: "Grand Cherokee",
    fabricante: "Jeep",
-   modeloAnio: 2008, "vinCarro": "JTDZN3EU8D3326218",
+   modeloAnio: 2008, 
+   vinCarro: "JTDZN3EU8D3326218",
    fechaSalida: "4/29/1969",
    precio: "$41866.97"
 },
@@ -2230,7 +2257,8 @@ db.carros.insertMany([{
    _id: 28,
    modelo: "Villager",
    fabricante: "Mercury",
-   modeloAnio: 2002, "vinCarro": "WAUGL98E18A031612",
+   modeloAnio: 2002, 
+   vinCarro: "WAUGL98E18A031612",
    fechaSalida: "1/11/1975",
    precio: "$35743.29"
 },
@@ -2238,7 +2266,8 @@ db.carros.insertMany([{
    _id: 29,
    modelo: "Touareg",
    fabricante: "Volkswagen",
-   modeloAnio: 2005, "vinCarro": "WBAFB33561L698558",
+   modeloAnio: 2005, 
+   vinCarro: "WBAFB33561L698558",
    fechaSalida: "10/24/1952",
    precio: "$31142.00"
 },
@@ -2246,7 +2275,8 @@ db.carros.insertMany([{
    _id: 30,
    modelo: "R8",
    fabricante: "Audi",
-   modeloAnio: 2011, "vinCarro": "1G6KD57Y56U519989",
+   modeloAnio: 2011, 
+   vinCarro: "1G6KD57Y56U519989",
    fechaSalida: "5/26/1995",
    precio: "$45976.10"
 },
@@ -2254,7 +2284,8 @@ db.carros.insertMany([{
    _id: 31,
    modelo: "RL",
    fabricante: "Acura",
-   modeloAnio: 2008, "vinCarro": "1G6DS57V180486519",
+   modeloAnio: 2008, 
+   vinCarro: "1G6DS57V180486519",
    fechaSalida: "8/26/1994",
    precio: "$31404.38"
 },
@@ -2262,7 +2293,8 @@ db.carros.insertMany([{
    _id: 32,
    modelo: "Ion",
    fabricante: "Saturn",
-   modeloAnio: 2007, "vinCarro": "1G4HP57238U442189",
+   modeloAnio: 2007, 
+   vinCarro: "1G4HP57238U442189",
    fechaSalida: "4/16/1978",
    precio: "$11054.62"
 },
@@ -2270,7 +2302,8 @@ db.carros.insertMany([{
    _id: 33,
    modelo: "Ram",
    fabricante: "Dodge",
-   modeloAnio: 2010, "vinCarro": "WBADR63492G064053",
+   modeloAnio: 2010, 
+   vinCarro: "WBADR63492G064053",
    fechaSalida: "4/10/1957",
    precio: "$35938.98"
 },
@@ -2278,7 +2311,8 @@ db.carros.insertMany([{
    _id: 34,
    modelo: "Maxima",
    fabricante: "Nissan",
-   modeloAnio: 2003, "vinCarro": "1G6AW5SX6E0130174",
+   modeloAnio: 2003, 
+   vinCarro: "1G6AW5SX6E0130174",
    fechaSalida: "3/17/1999",
    precio: "$41689.59"
 },
@@ -2286,7 +2320,8 @@ db.carros.insertMany([{
    _id: 35,
    modelo: "Cougar",
    fabricante: "Mercury",
-   modeloAnio: 1992, "vinCarro": "WAUEFAFLXCA928891",
+   modeloAnio: 1992, 
+   vinCarro: "WAUEFAFLXCA928891",
    fechaSalida: "6/24/1961",
    precio: "$8121.48"
 },
@@ -2294,7 +2329,8 @@ db.carros.insertMany([{
    _id: 36,
    modelo: "350Z",
    fabricante: "Nissan",
-   modeloAnio: 2006, "vinCarro": "3C4PDCGBXET214645",
+   modeloAnio: 2006, 
+   vinCarro: "3C4PDCGBXET214645",
    fechaSalida: "10/16/1997",
    precio: "$34684.90"
 },
@@ -2302,7 +2338,8 @@ db.carros.insertMany([{
    _id: 37,
    modelo: "Mustang",
    fabricante: "Ford",
-   modeloAnio: 2013, "vinCarro": "1G6DJ577180413817",
+   modeloAnio: 2013, 
+   vinCarro: "1G6DJ577180413817",
    fechaSalida: "8/18/2015",
    precio: "$6986.29"
 },
@@ -2310,7 +2347,8 @@ db.carros.insertMany([{
    _id: 38,
    modelo: "Ridgeline",
    fabricante: "Honda",
-   modeloAnio: 2006, "vinCarro": "1FTWF3A55AE047143",
+   modeloAnio: 2006, 
+   vinCarro: "1FTWF3A55AE047143",
    fechaSalida: "7/6/1954",
    precio: "$40089.57"
 },
@@ -2318,7 +2356,8 @@ db.carros.insertMany([{
    _id: 39,
    modelo: "V70",
    fabricante: "Volvo",
-   modeloAnio: 1998, "vinCarro": "2G4WD582761421773",
+   modeloAnio: 1998, 
+   vinCarro: "2G4WD582761421773",
    fechaSalida: "2/24/1969",
    precio: "$48770.62"
 },
@@ -2326,7 +2365,8 @@ db.carros.insertMany([{
    _id: 40,
    modelo: "Rodeo",
    fabricante: "Isuzu",
-   modeloAnio: 2001, "vinCarro": "TRUTC28N311780027",
+   modeloAnio: 2001, 
+   vinCarro: "TRUTC28N311780027",
    fechaSalida: "11/25/2006",
    precio: "$16293.51"
 },
@@ -2334,7 +2374,8 @@ db.carros.insertMany([{
    _id: 41,
    modelo: "Integra",
    fabricante: "Acura",
-   modeloAnio: 1992, "vinCarro": "WBANA53564B710275",
+   modeloAnio: 1992, 
+   vinCarro: "WBANA53564B710275",
    fechaSalida: "5/20/1989",
    precio: "$48422.64"
 },
@@ -2342,7 +2383,8 @@ db.carros.insertMany([{
    _id: 42,
    modelo: "Corvair",
    fabricante: "Chevrolet",
-   modeloAnio: 1960, "vinCarro": "KNDJT2A53D7166270",
+   modeloAnio: 1960, 
+   vinCarro: "KNDJT2A53D7166270",
    fechaSalida: "12/27/1973",
    precio: "$11234.62"
 },
@@ -2350,7 +2392,8 @@ db.carros.insertMany([{
    _id: 43,
    modelo: "rio",
    fabricante: "Volkswagen",
-   modeloAnio: 2000, "vinCarro": "WAUFFAFL8FN541080",
+   modeloAnio: 2000, 
+   vinCarro: "WAUFFAFL8FN541080",
    fechaSalida: "11/12/1950",
    precio: "$9106.54"
 },
@@ -2358,7 +2401,8 @@ db.carros.insertMany([{
    _id: 44,
    modelo: "Swift",
    fabricante: "Suzuki",
-   modeloAnio: 1997, "vinCarro": "JM1GJ1T67F1432508",
+   modeloAnio: 1997, 
+   vinCarro: "JM1GJ1T67F1432508",
    fechaSalida: "12/17/1953",
    precio: "$4428.97"
 },
@@ -2366,7 +2410,8 @@ db.carros.insertMany([{
    _id: 45,
    modelo: "Cougar",
    fabricante: "Mercury",
-   modeloAnio: 2000, "vinCarro": "WBABN33482P814222",
+   modeloAnio: 2000, 
+   vinCarro: "WBABN33482P814222",
    fechaSalida: "2/23/1999",
    precio: "$6912.29"
 },
@@ -2374,7 +2419,8 @@ db.carros.insertMany([{
    _id: 46,
    modelo: "S-Series",
    fabricante: "Saturn",
-   modeloAnio: 1997, "vinCarro": "1FMJK1JT7FE560194",
+   modeloAnio: 1997, 
+   vinCarro: "1FMJK1JT7FE560194",
    fechaSalida: "12/28/1989",
    precio: "$9894.25"
 },
@@ -2382,7 +2428,8 @@ db.carros.insertMany([{
    _id: 47,
    modelo: "Skyhawk",
    fabricante: "Buick",
-   modeloAnio: 1988, "vinCarro": "3D7JB1EP0AG871252",
+   modeloAnio: 1988, 
+   vinCarro: "3D7JB1EP0AG871252",
    fechaSalida: "5/19/2004",
    precio: "$43123.21"
 },
@@ -2390,7 +2437,8 @@ db.carros.insertMany([{
    _id: 48,
    modelo: "Previa",
    fabricante: "Toyota",
-   modeloAnio: 1997, "vinCarro": "JN8AS5MT9DW530099",
+   modeloAnio: 1997, 
+   vinCarro: "JN8AS5MT9DW530099",
    fechaSalida: "12/2/1989",
    precio: "$18575.18"
 },
@@ -2398,7 +2446,8 @@ db.carros.insertMany([{
    _id: 49,
    modelo: "Navigator",
    fabricante: "Lincoln",
-   modeloAnio: 2008, "vinCarro": "WDBSK7BA4CF509879",
+   modeloAnio: 2008, 
+   vinCarro: "WDBSK7BA4CF509879",
    fechaSalida: "2/17/1961",
    precio: "$10907.35"
 },
@@ -2406,7 +2455,8 @@ db.carros.insertMany([{
    _id: 50,
    modelo: "F250",
    fabricante: "Ford",
-   modeloAnio: 2005, "vinCarro": "WAUDGBFL2AA318785",
+   modeloAnio: 2005, 
+   vinCarro: "WAUDGBFL2AA318785",
    fechaSalida: "8/10/2013",
    precio: "$9550.30"
 }]);
