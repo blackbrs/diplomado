@@ -6099,3 +6099,59 @@ db.animales.find({
     rescatado: true,
     enPeligro: false
   }).limit(15).pretty();
+
+  /*
+ *
+ * PARTE 5: Uso de validadores
+ *
+ */
+
+// Ejemplo: Crear una coleccion usuarios, donde, el usuario y contraseña
+// no puedan ser nulos, la contraseña tenga un minimo de 10 caracteres
+// y contenga caracteres especiales, numeros, alfanumericos
+db.createCollection("empleados", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: [ "usuario", "password", "tipo" ],
+         properties: {
+            usuario: {
+               bsonType: "string",
+               description: "debe ser una cadena de caracteres (requerido)"
+            },
+            password: {
+               bsonType: "string",
+               minLength: 8,
+			   pattern: "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$",
+               description: "debe ser una cadena de caracteres de por lo menos 8 caracteres, que contenga letras, numeros, caracteres especiales"
+            },
+			tipo: {
+				bsonType: "string",
+				enum: ['Admin','Usuario'],
+				description: "Solo 2 tipos aceptados: Admin o Usuario"
+			}
+         }
+      }
+   }
+} );
+
+
+// Registro malo (password menor a 8 caracteres, sin cumplir condicion
+// de 1 letra, 1 numero, 1 caracter especial como minimo
+db.empleados.insertMany([
+	{usuario: "allanpoe", password: "123", tipo: "Admin"}
+]);
+
+db.empleados.insertMany([
+	{usuario: "allanpoe", password: "admin123$", tipo: "Admin"}
+]);
+
+
+
+/*
+ *
+ * PARTE 6: Uso de explain
+ *
+ */
+
+db.peliculas.explain().find({$or: [ {pais:'Japan'}, {pais:'China'}]});
