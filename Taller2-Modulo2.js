@@ -6093,3 +6093,9 @@ db.usuarios.find({
 db.carros.find({
     fabricante: "Honda"
 }).sort({modeloAnio: 1}).limit(16).pretty();
+
+//consultar animales que tengan estatus de recatado y no esten en peligro
+db.animales.find({
+    rescatado: true,
+    enPeligro: false
+  }).limit(15).pretty();
