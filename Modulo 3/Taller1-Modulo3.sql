@@ -10,19 +10,20 @@ CREATE TABLE laboratorio1.usuarios (
 	edad int,
 	"fechaNacimiento" date,
 	nacionalidad text,
-	PRIMARY KEY (id)
+	PRIMARY KEY (genero, edad, id)
 );
 
 CREATE TABLE laboratorio1.peliculas (
 	id bigint,
 	nombres text,
-	"fechaEstreno" date,
+	fechaEstreno date,
 	director text,
 	genero text,
 	pais varchar,
 	empresa text,
-	PRIMARY KEY (id)
-);
+	PRIMARY KEY (pais, genero, director, fechaEstreno, id)
+) WITH CLUSTERING ORDER BY (genero ASC, director ASC, fechaEstreno ASC);
+
 
 CREATE TABLE laboratorio1.animales (
 	id bigint,
@@ -36,23 +37,37 @@ CREATE TABLE laboratorio1.animales (
 	PRIMARY KEY (id)
 );
 
+CREATE INDEX rescatadoIdx ON animales(rescatado);
+
+CREATE CUSTOM INDEX  paisIdx ON laboratorio1.animales(pais)
+USING 'org.apache.cassandra.index.sasi.SASIIndex'
+WITH OPTIONS={'mode':'CONTAINS'};
+
+
+
+
 CREATE TABLE laboratorio1.carros (
 	id bigint,
     modelo text,
-	"nombreComp" text,
+	nombreComp text,
 	vim varchar,
 	anio bigint,
     precio float,
-	PRIMARY KEY (id)
+	PRIMARY KEY (nombreComp, anio, precio, id)
 );
+
+CREATE INDEX anioIdx ON carros(anio);
+CREATE INDEX precioIdx ON carros(precio);
+
 
 CREATE TABLE laboratorio1.compania (
 	id bigint,
-	"nombreComp" text,
+	nombreComp text,
 	pais text,
-	"carroId" bigint,
-	PRIMARY KEY (id)
+	carroId bigint,
+	PRIMARY KEY (nombreComp, pais, id)
 );
+
 
 /* Insercion de datos */
 insert into usuarios (id, nombres, apellidos, username, email, genero, edad, "fechaNacimiento", nacionalidad) values (1, 'Harmony', 'Bernli', 'hbernli0', 'hbernli0@furl.net', 'F', 84, '2003-08-17', 'China');
@@ -71,21 +86,28 @@ insert into usuarios (id, nombres, apellidos, username, email, genero, edad, "fe
 insert into usuarios (id, nombres, apellidos, username, email, genero, edad, "fechaNacimiento", nacionalidad) values (14, 'Huntington', 'Stain', 'hstaind', 'hstaind@sakura.ne.jp', 'M', 17, '2018-02-16', 'Denmark');
 insert into usuarios (id, nombres, apellidos, username, email, genero, edad, "fechaNacimiento", nacionalidad) values (15, 'Herbert', 'Treneer', 'htreneere', 'htreneere@indiegogo.com', 'M', 32, '1982-09-03', 'Nicaragua');
 
-insert into peliculas (id, nombres, "fechaEstreno", director, genero, pais, empresa) values (1, 'Thaw, The', '1993-10-17', 'Tallie Rudolph', 'Horror|Sci-Fi|Thriller', 'Portugal', 'American Health Packaging');
-insert into peliculas (id, nombres, "fechaEstreno", director, genero, pais, empresa) values (2, 'Kramer vs. Kramer', '1974-03-14', 'Paulina Markwelley', 'Drama', 'Indonesia', 'Van Tibolli Beauty Corp.');
-insert into peliculas (id, nombres, "fechaEstreno", director, genero, pais, empresa) values (3, 'Let Sleeping Corpses Lie (Non si deve profanare il sonno dei morti)', '1928-02-24', 'Rosemonde Lavens', 'Horror', 'China', 'Cosmetica Laboratories Inc.');
-insert into peliculas (id, nombres, "fechaEstreno", director, genero, pais, empresa) values (4, 'Without a Paddle: Nature''s Calling', '1976-06-22', 'Annice Marion', 'Adventure|Comedy', 'Thailand', 'MAKEUP ART COSMETICS');
-insert into peliculas (id, nombres, "fechaEstreno", director, genero, pais, empresa) values (5, 'Bestiaire', '1989-05-01', 'Lammond Fredi', 'Documentary', 'Czech Republic', 'BluePoint Laboratories');
-insert into peliculas (id, nombres, "fechaEstreno", director, genero, pais, empresa) values (6, 'Adrift (Choi Voi)', '1917-12-11', 'Noel Haymes', 'Drama', 'China', 'REMEDYREPACK INC.');
-insert into peliculas (id, nombres, "fechaEstreno", director, genero, pais, empresa) values (7, 'Glue', '2016-11-05', 'Lanita McEwen', 'Drama', 'Portugal', 'HART Health');
-insert into peliculas (id, nombres, "fechaEstreno", director, genero, pais, empresa) values (8, 'Run Silent Run Deep', '1933-12-15', 'Brook Larrad', 'War', 'France', 'Jubilant HollisterStier LLC');
-insert into peliculas (id, nombres, "fechaEstreno", director, genero, pais, empresa) values (9, 'Posse', '2006-12-04', 'Ulrica Conaghan', 'Western', 'Malaysia', 'Apotex Corp.');
-insert into peliculas (id, nombres, "fechaEstreno", director, genero, pais, empresa) values (10, 'The Grump', '2015-03-01', 'Timi Butland', 'Comedy', 'Argentina', 'Lupin Pharmaceuticals, Inc.');
-insert into peliculas (id, nombres, "fechaEstreno", director, genero, pais, empresa) values (11, 'Fearless Hyena, The (Xiao quan guai zhao)', '2000-07-12', 'Rasla Dickerson', 'Action|Comedy', 'Portugal', 'Empire Stationery Distributors Inc.');
-insert into peliculas (id, nombres, "fechaEstreno", director, genero, pais, empresa) values (12, 'A Spell to Ward Off the Darkness', '1999-05-13', 'Blakelee Hardesty', 'Documentary', 'Palestinian Territory', 'NCS HealthCare of KY, Inc dba Vangard Labs');
-insert into peliculas (id, nombres, "fechaEstreno", director, genero, pais, empresa) values (13, 'Higher Learning', '2022-02-26', 'Germaine Billett', 'Drama', 'China', 'Ventura International LTD');
-insert into peliculas (id, nombres, "fechaEstreno", director, genero, pais, empresa) values (14, 'My Best Friend''s Wife', '1957-02-24', 'Marten Liddiard', 'Comedy', 'China', 'Choice Laboratories Limited');
-insert into peliculas (id, nombres, "fechaEstreno", director, genero, pais, empresa) values (15, 'House of Cards', '1960-01-04', 'Nora Tydd', 'Drama', 'China', 'Blue Cross Laboratories, Inc.');
+
+
+
+insert into peliculas (id, nombres, fechaEstreno, director, genero, pais, empresa) values (1, 'Thaw, The', '1993-10-17', 'Tallie Rudolph', 'Horror|Sci-Fi|Thriller', 'Portugal', 'American Health Packaging');
+insert into peliculas (id, nombres, fechaEstreno, director, genero, pais, empresa) values (2, 'Kramer vs. Kramer', '1974-03-14', 'Paulina Markwelley', 'Drama', 'Indonesia', 'Van Tibolli Beauty Corp.');
+insert into peliculas (id, nombres, fechaEstreno, director, genero, pais, empresa) values (3, 'Let Sleeping Corpses Lie (Non si deve profanare il sonno dei morti)', '1928-02-24', 'Rosemonde Lavens', 'Horror', 'China', 'Cosmetica Laboratories Inc.');
+insert into peliculas (id, nombres, fechaEstreno, director, genero, pais, empresa) values (4, 'Without a Paddle: Nature''s Calling', '1976-06-22', 'Annice Marion', 'Adventure|Comedy', 'Thailand', 'MAKEUP ART COSMETICS');
+insert into peliculas (id, nombres, fechaEstreno, director, genero, pais, empresa) values (5, 'Bestiaire', '1989-05-01', 'Lammond Fredi', 'Documentary', 'Czech Republic', 'BluePoint Laboratories');
+insert into peliculas (id, nombres, fechaEstreno, director, genero, pais, empresa) values (6, 'Adrift (Choi Voi)', '1917-12-11', 'Noel Haymes', 'Drama', 'China', 'REMEDYREPACK INC.');
+insert into peliculas (id, nombres, fechaEstreno, director, genero, pais, empresa) values (7, 'Glue', '2016-11-05', 'Lanita McEwen', 'Drama', 'Portugal', 'HART Health');
+insert into peliculas (id, nombres, fechaEstreno, director, genero, pais, empresa) values (8, 'Run Silent Run Deep', '1933-12-15', 'Brook Larrad', 'War', 'France', 'Jubilant HollisterStier LLC');
+insert into peliculas (id, nombres, fechaEstreno, director, genero, pais, empresa) values (9, 'Posse', '2006-12-04', 'Ulrica Conaghan', 'Western', 'Malaysia', 'Apotex Corp.');
+insert into peliculas (id, nombres, fechaEstreno, director, genero, pais, empresa) values (10, 'The Grump', '2015-03-01', 'Timi Butland', 'Comedy', 'Argentina', 'Lupin Pharmaceuticals, Inc.');
+insert into peliculas (id, nombres, fechaEstreno, director, genero, pais, empresa) values (11, 'Fearless Hyena, The (Xiao quan guai zhao)', '2000-07-12', 'Rasla Dickerson', 'Action|Comedy', 'Portugal', 'Empire Stationery Distributors Inc.');
+insert into peliculas (id, nombres, fechaEstreno, director, genero, pais, empresa) values (12, 'A Spell to Ward Off the Darkness', '1999-05-13', 'Blakelee Hardesty', 'Documentary', 'Palestinian Territory', 'NCS HealthCare of KY, Inc dba Vangard Labs');
+insert into peliculas (id, nombres, fechaEstreno, director, genero, pais, empresa) values (13, 'Higher Learning', '2022-02-26', 'Germaine Billett', 'Drama', 'China', 'Ventura International LTD');
+insert into peliculas (id, nombres, fechaEstreno, director, genero, pais, empresa) values (14, 'My Best Friend''s Wife', '1957-02-24', 'Marten Liddiard', 'Comedy', 'China', 'Choice Laboratories Limited');
+insert into peliculas (id, nombres, fechaEstreno, director, genero, pais, empresa) values (15, 'House of Cards', '1960-01-04', 'Nora Tydd', 'Drama', 'China', 'Blue Cross Laboratories, Inc.');
+
+
+
+
 
 insert into animales (id, "nombreComun", "nombreCientifico", pais, "anioRegistro", extinto, "enPeligro", rescatado) values (1, 'Siskin, yellow-rumped', 'Carduelis uropygialis', 'Central African Republic', 2000, false, true, false);
 insert into animales (id, "nombreComun", "nombreCientifico", pais, "anioRegistro", extinto, "enPeligro", rescatado) values (2, 'Collared lizard', 'Crotaphytus collaris', 'Sweden', 2009, false, false, false);
@@ -103,34 +125,60 @@ insert into animales (id, "nombreComun", "nombreCientifico", pais, "anioRegistro
 insert into animales (id, "nombreComun", "nombreCientifico", pais, "anioRegistro", extinto, "enPeligro", rescatado) values (14, 'Red-billed buffalo weaver', 'Bubalornis niger', 'France', 2008, true, false, false);
 insert into animales (id, "nombreComun", "nombreCientifico", pais, "anioRegistro", extinto, "enPeligro", rescatado) values (15, 'Red-billed tropic bird', 'Phaethon aethereus', 'China', 1998, true, false, false);
 
-insert into carros (id, modelo, "nombreComp", vim, anio, precio) values (1, 'xA', 'Scion', '5TDDW5G16FS782001', 2006, 489.976);
-insert into carros (id, modelo, "nombreComp", vim, anio, precio) values (2, 'Santa Fe', 'Hyundai', 'KNADH4A30A6029889', 2003, 3836.224);
-insert into carros (id, modelo, "nombreComp", vim, anio, precio) values (3, 'tC', 'Scion', 'KNAFT4A20A5320428', 2009, 6610.627);
-insert into carros (id, modelo, "nombreComp", vim, anio, precio) values (4, 'GX', 'Lexus', 'WAU3VAFR2CA834244', 2005, 1801.685);
-insert into carros (id, modelo, "nombreComp", vim, anio, precio) values (5, 'Allroad', 'Audi', '1FTWW3B50AE278093', 2005, 9300.289);
-insert into carros (id, modelo, "nombreComp", vim, anio, precio) values (6, 'SLR McLaren', 'Mercedes-Benz', 'WAUNF78P96A085564', 2007, 6125.451);
-insert into carros (id, modelo, "nombreComp", vim, anio, precio) values (7, 'Grand Am', 'Pontiac', 'JM1CW2BL2E0326338', 1989, 7867.394);
-insert into carros (id, modelo, "nombreComp", vim, anio, precio) values (8, 'Seville', 'Cadillac', 'WAUMF98P46A356084', 1995, 6710.399);
-insert into carros (id, modelo, "nombreComp", vim, anio, precio) values (9, 'A4', 'Audi', 'WBABS53493E667538', 2001, 314.817);
-insert into carros (id, modelo, "nombreComp", vim, anio, precio) values (10, 'New Beetle', 'Volkswagen', '3VWA17AU6FM291148', 1998, 9516.244);
-insert into carros (id, modelo, "nombreComp", vim, anio, precio) values (11, 'Liberty', 'Jeep', '2T1BU4EE6BC678821', 2006, 5026.307);
-insert into carros (id, modelo, "nombreComp", vim, anio, precio) values (12, 'NSX', 'Acura', '1N6AD0CWXFN324770', 1992, 9585.026);
-insert into carros (id, modelo, "nombreComp", vim, anio, precio) values (13, '300', 'Chrysler', 'JTEBU4BF4CK300229', 2012, 2102.182);
-insert into carros (id, modelo, "nombreComp", vim, anio, precio) values (14, 'Grand Vitara', 'Suzuki', 'WBADS334X1G064130', 2000, 3426.655);
-insert into carros (id, modelo, "nombreComp", vim, anio, precio) values (15, 'S6', 'Audi', 'WBABD534X6P200292', 2010, 6670.672);
 
-insert into compania (id, "nombreComp", pais, "carroId") values (1, 'Photospace', 'Brazil', 5);
-insert into compania (id, "nombreComp", pais, "carroId") values (2, 'Browsedrive', 'China', 7);
-insert into compania (id, "nombreComp", pais, "carroId") values (3, 'Tanoodle', 'Indonesia', 3);
-insert into compania (id, "nombreComp", pais, "carroId") values (4, 'Wikibox', 'South Africa', 5);
-insert into compania (id, "nombreComp", pais, "carroId") values (5, 'Realmix', 'China', 15);
-insert into compania (id, "nombreComp", pais, "carroId") values (6, 'Blogpad', 'Indonesia', 5);
-insert into compania (id, "nombreComp", pais, "carroId") values (7, 'Oloo', 'Russia', 14);
-insert into compania (id, "nombreComp", pais, "carroId") values (8, 'Twinder', 'Cuba', 4);
-insert into compania (id, "nombreComp", pais, "carroId") values (9, 'Trilith', 'China', 4);
-insert into compania (id, "nombreComp", pais, "carroId") values (10, 'Yata', 'Iran', 5);
-insert into compania (id, "nombreComp", pais, "carroId") values (11, 'Katz', 'Philippines', 5);
-insert into compania (id, "nombreComp", pais, "carroId") values (12, 'Gabspot', 'Kazakhstan', 4);
-insert into compania (id, "nombreComp", pais, "carroId") values (13, 'Quamba', 'Russia', 8);
-insert into compania (id, "nombreComp", pais, "carroId") values (14, 'Feedfire', 'Czech Republic', 6);
-insert into compania (id, "nombreComp", pais, "carroId") values (15, 'Jetpulse', 'China', 5);
+
+
+insert into carros (id, modelo, nombreComp, vim, anio, precio) values (1, 'xA', 'Scion', '5TDDW5G16FS782001', 2006, 489.976);
+insert into carros (id, modelo, nombreComp, vim, anio, precio) values (2, 'Santa Fe', 'Hyundai', 'KNADH4A30A6029889', 2003, 3836.224);
+insert into carros (id, modelo, nombreComp, vim, anio, precio) values (3, 'tC', 'Scion', 'KNAFT4A20A5320428', 2009, 6610.627);
+insert into carros (id, modelo, nombreComp, vim, anio, precio) values (4, 'GX', 'Lexus', 'WAU3VAFR2CA834244', 2005, 1801.685);
+insert into carros (id, modelo, nombreComp, vim, anio, precio) values (5, 'Allroad', 'Audi', '1FTWW3B50AE278093', 2005, 9300.289);
+insert into carros (id, modelo, nombreComp, vim, anio, precio) values (6, 'SLR McLaren', 'Mercedes-Benz', 'WAUNF78P96A085564', 2007, 6125.451);
+insert into carros (id, modelo, nombreComp, vim, anio, precio) values (7, 'Grand Am', 'Pontiac', 'JM1CW2BL2E0326338', 1989, 7867.394);
+insert into carros (id, modelo, nombreComp, vim, anio, precio) values (8, 'Seville', 'Cadillac', 'WAUMF98P46A356084', 1995, 6710.399);
+insert into carros (id, modelo, nombreComp, vim, anio, precio) values (9, 'A4', 'Audi', 'WBABS53493E667538', 2001, 314.817);
+insert into carros (id, modelo, nombreComp, vim, anio, precio) values (10, 'New Beetle', 'Volkswagen', '3VWA17AU6FM291148', 1998, 9516.244);
+insert into carros (id, modelo, nombreComp, vim, anio, precio) values (11, 'Liberty', 'Jeep', '2T1BU4EE6BC678821', 2006, 5026.307);
+insert into carros (id, modelo, nombreComp, vim, anio, precio) values (12, 'NSX', 'Acura', '1N6AD0CWXFN324770', 1992, 9585.026);
+insert into carros (id, modelo, nombreComp, vim, anio, precio) values (13, '300', 'Chrysler', 'JTEBU4BF4CK300229', 2012, 2102.182);
+insert into carros (id, modelo, nombreComp, vim, anio, precio) values (14, 'Grand Vitara', 'Suzuki', 'WBADS334X1G064130', 2000, 3426.655);
+insert into carros (id, modelo, nombreComp, vim, anio, precio) values (15, 'S6', 'Audi', 'WBABD534X6P200292', 2010, 6670.672);
+
+
+
+insert into compania (id, nombreComp, pais, carroId) values (1, 'Photospace', 'Brazil', 5);
+insert into compania (id, nombreComp, pais, carroId) values (2, 'Browsedrive', 'China', 7);
+insert into compania (id, nombreComp, pais, carroId) values (3, 'Tanoodle', 'Indonesia', 3);
+insert into compania (id, nombreComp, pais, carroId) values (4, 'Wikibox', 'South Africa', 5);
+insert into compania (id, nombreComp, pais, carroId) values (5, 'Realmix', 'China', 15);
+insert into compania (id, nombreComp, pais, carroId) values (6, 'Blogpad', 'Indonesia', 5);
+insert into compania (id, nombreComp, pais, carroId) values (7, 'Oloo', 'Russia', 14);
+insert into compania (id, nombreComp, pais, carroId) values (8, 'Twinder', 'Cuba', 4);
+insert into compania (id, nombreComp, pais, carroId) values (9, 'Trilith', 'China', 4);
+insert into compania (id, nombreComp, pais, carroId) values (10, 'Yata', 'Iran', 5);
+insert into compania (id, nombreComp, pais, carroId) values (11, 'Katz', 'Philippines', 5);
+insert into compania (id, nombreComp, pais, carroId) values (12, 'Gabspot', 'Kazakhstan', 4);
+insert into compania (id, nombreComp, pais, carroId) values (13, 'Quamba', 'Russia', 8);
+insert into compania (id, nombreComp, pais, carroId) values (14, 'Feedfire', 'Czech Republic', 6);
+insert into compania (id, nombreComp, pais, carroId) values (15, 'Jetpulse', 'China', 5);
+
+-- Consulta 1
+SELECT * FROM animales WHERE rescatado = false;
+
+-- Consulta 2
+SELECT * FROM animales WHERE pais LIKE 'Ch%';
+
+-- Consulta 3
+SELECT genero, COUNT(*) FROM usuarios GROUP BY genero;
+
+-- Consulta 4
+SELECT genero, edad, COUNT(*) FROM usuarios GROUP BY genero, edad;
+
+-- Consulta 5
+SELECT pais, genero, COUNT(*) FROM peliculas WHERE pais='China' GROUP BY pais, genero ORDER BY genero DESC;
+
+-- Consulta 6
+SELECT * FROM carros WHERE nombreComp='Jeep' AND  anio = 2006 AND precio >= 3000.00;
+
+-- Consulta 7
+SELECT DISTINCT nombreComp FROM compania;
